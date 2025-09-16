@@ -1,0 +1,7 @@
+{
+  "name": "MovilTutorial",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
