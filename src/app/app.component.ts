@@ -1,11 +1,27 @@
 import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { IonicModule, AlertController } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { PRODUCTS } from 'src/data/products';
+import type { Product } from 'src/models/product';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
-  imports: [IonApp, IonRouterOutlet],
+  standalone: true,
+  imports: [IonicModule, CommonModule, ProductCardComponent],
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  constructor() {}
+  products: Product[] = PRODUCTS;
+
+  constructor(private alertCtrl: AlertController) {}
+
+  async mostrarDetalle(product: Product) {
+    const alert = await this.alertCtrl.create({
+      header: product.name,
+      message: `<p><strong>Precio:</strong> $${product.price}</p><p>${product.description ?? ''}</p>`,
+      buttons: ['Cerrar']
+    });
+    await alert.present();
+  }
 }
