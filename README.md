@@ -52,7 +52,7 @@ importados (Angular Team, 2020).
 
 (Green, et al., 2020)
 
-6. Decoradores @Input y @Output
+5. Decoradores @Input y @Output
    
 @Input(): permite pasar datos de un componente padre a un componente hijo. Se utiliza para definir una propiedad en un componente hijo que recibirá los valores enviados desde el componente padre.
 
@@ -60,7 +60,7 @@ importados (Angular Team, 2020).
 
 (Angular Team, 2020)
 
-Referencias
+REFERENCIAS
 
 Angular. (s/f). Angular.Io. Recuperado el 16 de septiembre de 2025, de https://v17.angular.io/guide/architecture-components
 
