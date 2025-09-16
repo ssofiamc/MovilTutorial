@@ -19,7 +19,8 @@ export class AppComponent {
   async mostrarDetalle(product: Product) {
     const alert = await this.alertCtrl.create({
       header: product.name,
-      message: `<p><strong>Precio:</strong> $${product.price}</p><p>${product.description ?? ''}</p>`,
+      message: `Precio: $${product.price} 
+      ${product.description ?? ''}`,
       buttons: ['Cerrar']
     });
     await alert.present();
